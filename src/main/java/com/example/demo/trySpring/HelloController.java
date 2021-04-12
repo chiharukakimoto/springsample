@@ -24,7 +24,7 @@ public class HelloController {
 		return "helloResponse";
 	}
 
-@PostMapping("/hello/db")
+	@PostMapping("/hello/db")
 	public String postDbRequest(@RequestParam("text2")String str, Model model){
 		int id = Integer.parseInt(str);
 		Employee employee = helloService.findOne(id);
@@ -32,6 +32,6 @@ public class HelloController {
 		model.addAttribute("name", employee.getEmployeeName());
 		model.addAttribute("age", employee.getAge());
 		return "helloResponseDB";
-}
 
+	}
 }
