@@ -11,9 +11,9 @@ public class HelloService {
     private HelloRepository helloRepository;
     public Employee findOne(int id) {
         Map<String, Object> map = helloRepository.findOne(id);
-        int employeeId = (integer)map.get("employee_id");
+        Integer employeeId = (Integer)map.get("employee_id");
         String employeeName = (String)map.get("employee_name");
-        int age = (integer)map.get("age");
+        Integer age = (Integer)map.get("age");
         Employee employee = new Employee();
         employee.setEmployeeId(employeeId);
         employee.setEmployeeName(employeeName);
