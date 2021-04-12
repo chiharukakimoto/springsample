@@ -12,7 +12,6 @@ public class HelloController {
 
 	@Autowired
 	private HelloService helloService;
-	private Integer integer;
 
 	@GetMapping("/hello")
 	public String getHello() {
@@ -27,7 +26,7 @@ public class HelloController {
 
 @PostMapping("/hello/db")
 	public String postDbRequest(@RequestParam("text2")String str, Model model){
-		int id = integer.parseInt(str);
+		int id = Integer.parseInt(str);
 		Employee employee = helloService.findOne(id);
 		model.addAttribute("id", employee.getEmployeeId());
 		model.addAttribute("name", employee.getEmployeeName());
