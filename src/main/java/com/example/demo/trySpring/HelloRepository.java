@@ -12,8 +12,8 @@ public class HelloRepository {
     private JdbcTemplate jdbcTemplate;
     public Map<String, Object> findOne(int id) {
         String query = "SELECT "
-                +"employee_id "
-                +"employee_name "
+                +"employee_id, "
+                +"employee_name, "
                 +"age "
                 +"FROM employee "
                 +"WHERE employee_id=?";
