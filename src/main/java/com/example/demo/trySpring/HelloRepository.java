@@ -16,7 +16,7 @@ public class HelloRepository {
                 +"employee_name, "
                 +"age "
                 +"FROM employee "
-                +"WHERE employee_id=?,";
+                +"WHERE employee_id=?";
         Map<String, Object> employee = jdbcTemplate.queryForMap(query, id);
 
         return employee;
